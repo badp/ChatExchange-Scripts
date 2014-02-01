@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 #requires https://pypi.python.org/pypi/websocket-client/
 import websocket
 import json
