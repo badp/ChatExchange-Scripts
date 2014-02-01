@@ -21,10 +21,6 @@ else:
 wrap = SEChatWrapper("SE")
 wrap.login(username, password)
 
-url = "https://github.com/Manishearth/ChatExchange-Scripts/blob/master/lazers.py"
-prefix = "[ [LAZERS v2](%s) ]" % url
-
-
 def handlepost(data):
   try:
     a = json.loads(json.loads(data)['data'])
