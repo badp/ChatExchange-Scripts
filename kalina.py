@@ -22,3 +22,4 @@ wrap.login(username,password)
 evs=json.loads(wrap.br.postSomething("chats/35/events",{"since":0,"Mode":"Messages","msgCount":"20"}))['events']
 uids=[ev['user_name'] for ev in evs]
 wrap.sendMessage("35","_Sets @%s on fire_" % choice(uids))
+wrap.logout()
