@@ -34,7 +34,10 @@ def handlepost(data):
 if __name__ == "__init__":
   ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
   ws.send("41-questions-newest")
-  while True:
-    a = ws.recv()
-    if a is not None and a != "":
-      handlepost(a)
+  try:
+    while True:
+      a = ws.recv()
+      if a is not None and a != "":
+        handlepost(a)
+  except KeyboardInterrupt:
+    wrap.logout()
